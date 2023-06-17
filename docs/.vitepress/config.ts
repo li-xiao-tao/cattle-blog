@@ -16,14 +16,26 @@ const blogTheme = getThemeConfig({
     {
       nickname: '豆腐脑吃甜的',
       des: '你的指尖用于改变世界的力量',
-      avatar:'/public/logo.png',
+      avatar:'https://www.study-tao.top/logo.png',
       url: 'https://www.study-tao.top/#/'
     },
     {
       nickname: '前端导航',
       des: '一些前端文档地址及开发工具地址',
-      avatar:'/public/logo.png',
+      avatar:'https://www.study-tao.top/logo.png',
       url: '/nav/'
+    },
+    {
+      nickname: '开源作者',
+      des: '',
+      avatar:'https://avatars.githubusercontent.com/u/49076004?v=4',
+      url: 'https://linweiyuan.github.io/'
+    },
+    {
+      nickname: '基于assessToken',
+      des: 'ChatGPT代理',
+      avatar:'https://blognas.hwb0307.com/logo.jpg',
+      url: 'https://blognas.hwb0307.com/linux/docker/4201'
     }
   ],
   // 推荐文章

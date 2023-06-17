@@ -22,14 +22,3 @@ docker rm -f cattle-doc && docker rmi cattle-doc:v1.0 && docker build -t cattle-
 ```shell
 docker run --name cattle-doc --restart always -d -p 3000:3000 cattle-doc:v1.0
 ```
-
-
-# RackNerd LLC
-https://my.racknerd.com/index.php?rp=/login
-## 控制台
-- url https://nerdvm.racknerd.com/login.php
-- username vmuser109803
-- password i8NVFZpnSe
-## cenos7
-- username root
-- password eAvWjyU807wG1gQZ48

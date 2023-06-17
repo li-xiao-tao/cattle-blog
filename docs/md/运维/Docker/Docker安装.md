@@ -31,6 +31,7 @@ wget -P /home/docker/docker-compose https://github.com/docker/compose/releases/d
 mv /home/docker/docker-compose/docker-compose-linux-x86_64 /home/docker/docker-compose/docker-compose && \
 chmod +x /home/docker/docker-compose/docker-compose && \
 echo 'export PATH=$PATH:/home/docker/docker-compose' | tee -a /etc/profile && source /etc/profile && \
+source /etc/profile && \
 yum install -y bash-completion && \
 source /etc/profile.d/bash_completion.sh && \
 curl -L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/bash/docker -o /etc/bash_completion.d/docker && \
