@@ -16,13 +16,13 @@ const blogTheme = getThemeConfig({
     {
       nickname: '豆腐脑吃甜的',
       des: '你的指尖用于改变世界的力量',
-      avatar:'https://www.study-tao.top/logo.png',
-      url: 'https://www.study-tao.top/#/'
+      avatar:'https://www.174907.xyz/logo.png',
+      url: 'https://www.174907.xyz/#/'
     },
     {
       nickname: '前端导航',
       des: '一些前端文档地址及开发工具地址',
-      avatar:'https://www.study-tao.top/logo.png',
+      avatar:'https://www.174907.xyz/logo.png',
       url: '/nav/'
     },
     {

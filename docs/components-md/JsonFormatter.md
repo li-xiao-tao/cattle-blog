@@ -1,3 +1,6 @@
+---
+hidden: true
+---
 <script setup>
 import { defineAsyncComponent } from 'vue';
 

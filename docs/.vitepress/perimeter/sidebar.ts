@@ -30,6 +30,7 @@ export const sidebarMenus: SidebarMenu[] = [
             { text: "Mysql-sql优化", link: "/md/后端/Mysql/Mysql-sql优化.md" },
             { text: "Mysql应用优化", link: "/md/后端/Mysql/Mysql应用优化.md" },
             { text: "SQL优化企业实战", link: "/md/后端/Mysql/SQL优化企业实战.md" },
+            { text: "Enum", link: "/md/后端/Java/Enum.md" },
         ]
     },
     {
@@ -200,5 +201,17 @@ export const sidebarMenus: SidebarMenu[] = [
             { text: "110.Docker-网页webssh", link: "/md/运维/Docker容器/110.Docker-网页webssh.md" },
             { text: "111.Docker-Reader小说", link: "/md/运维/Docker容器/111.Docker-Reader小说.md" },
         ]
-    }
+    },
+    {
+        //icon: "",
+        text: "轮子",
+        // 是否可折叠
+        collapsible: true,
+        // 默认是否折叠
+        collapsed: true,
+        items: [
+            {text: "List校验", link: "/md/后端/utils/List校验.md"},
+            {text: "BigDecimal详解", link: "/md/后端/Java/接口详情AOP.md"},
+        ]
+    },
 ]

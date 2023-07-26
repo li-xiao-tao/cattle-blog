@@ -90,13 +90,9 @@ export const navMenus: NavMenu[] = [
     // 默认是否折叠
     collapsed: true,
     items: [
-      { text: "ChatGPT", link: "https://cattle.study-tao.top" },
-      { text: "VSCode", link: "https://vscode.study-tao.top/" },
-      { text: "docker可视化", link: "https://docker.study-tao.top/" },
-      { text: "gitlab", link: "https://gitlab.study-tao.top" },
-      { text: "jenkins", link: "https://jenkins.study-tao.top" },
-      { text: "博客", link: "https://study-tao.top/" },
-      { text: "博客", link: "https://www.study-tao.top/" },
+      { text: "VSCode", link: "https://vscode.174907.xyz/" },
+      { text: "docker可视化", link: "https://docker.174907.xyz/" },
+      { text: "博客", link: "https://www.174907.xyz/" },
     ]
   },
   {

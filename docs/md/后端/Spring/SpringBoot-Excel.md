@@ -475,6 +475,11 @@ public class StrUtil {
 ```
 ### 查询字段索引
 
+
+- getIncludeColumns  select【"id,name"】 获取 Class<?> userClass 的字段索引
+
+- updateIndexes  select【"id,name"】 跟新 Class<?> userClass 的字段注解 ExcelProperty 索引 index 的值
+
 ```java
 public class ClassUtils {
 
@@ -511,6 +516,94 @@ public class ClassUtils {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         // 需要查寻字段的字段索引
         return sa.keySet();
+    }
+
+       /**
+     * 更新索引下标，并返回列索引下标
+     *
+     * @param indexes  属性列表
+     * @param cla      对象
+     * @param property 需要修改的注解属性
+     */
+    public static List<Integer> updateIndexes(List<String> indexes, Class<?> cla, String property){
+        try {
+            ArrayList<Integer> indexList = new ArrayList<>();
+            HashMap<String, Integer> map = new HashMap<>(indexes.size());
+            // 自定义列索引
+            for (int i = 0; i < indexes.size(); i++) {
+
+                Field field = cla.getDeclaredField(indexes.get(i));
+                field.setAccessible(true);
+                // 获取字段上的注解
+                ExcelProperty excelPropertyAnnotation = field.getAnnotation(ExcelProperty.class);
+
+                // 修改注解属性值
+                if (excelPropertyAnnotation != null) {
+                    // 获取注解的代理处理器
+                    InvocationHandler invocationHandler = Proxy.getInvocationHandler(excelPropertyAnnotation);
+
+                    // 获取注解属性成员变量  memberValues 不能改
+                    Field memberValuesField = invocationHandler.getClass().getDeclaredField("memberValues");
+                    memberValuesField.setAccessible(true);
+
+                    // 更新注解属性值
+                    Map<String, Object> memberValues = (Map<String, Object>) memberValuesField.get(invocationHandler);
+                    memberValues.put(property, i);
+
+
+                    map.put(field.getName(),i);
+                    indexList.add(i);
+                }
+            }
+            // 打印列
+            printlnIndex(map);
+
+            // 对其他列 索引赋值 -1  【其底层已经默认-1，但有些列不是-1 与自定义列索引冲突，这里再赋值一次】
+            excludeAttributes(indexes, cla, property);
+            return indexList;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void excludeAttributes(List<String> indexes, Class<?> cla, String property) throws NoSuchFieldException, IllegalAccessException {
+        // 获取类的所有字段，包括私有字段
+        Field[] fields = cla.getDeclaredFields();
+        // 遍历字段
+        for (Field field : fields) {
+            if (!indexes.contains(field.getName())) {
+
+                Field excludeField = cla.getDeclaredField(field.getName());
+                excludeField.setAccessible(true);
+                // 获取字段上的注解
+                ExcelProperty excelPropertyAnnotation = field.getAnnotation(ExcelProperty.class);
+                // 修改注解属性值
+                if (excelPropertyAnnotation != null && excelPropertyAnnotation.index() != -1) {
+                    // 获取注解的代理处理器
+                    InvocationHandler invocationHandler = Proxy.getInvocationHandler(excelPropertyAnnotation);
+                    // 获取注解属性成员变量  memberValues 不能改
+                    Field memberValuesField = invocationHandler.getClass().getDeclaredField("memberValues");
+                    memberValuesField.setAccessible(true);
+                    // 更新注解属性值
+                    Map<String, Object> memberValues = (Map<String, Object>) memberValuesField.get(invocationHandler);
+                    memberValues.put(property, -1);
+                }
+            }
+        }
+    }
+
+    /**
+     * 打印修改的列
+     * @param map
+     */
+    private static void printlnIndex(HashMap<String, Integer> map) {
+        Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Integer> entry = iterator.next();
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            System.out.println("Demand导出 字段列-下标值  字段: " + key + ", 索引下标: " + value);
+        }
     }
 }
 ```
