@@ -190,7 +190,6 @@ export const sidebarMenus: SidebarMenu[] = [
             { text: "16.Docker-xxl-job", link: "/md/运维/Docker容器/16.Docker-xxl-job.md" },
             { text: "17.Docker-堡垒机jumpserver", link: "/md/运维/Docker容器/17.Docker-堡垒机jumpserver.md" },
             { text: "101.Docker-可视化Portainer", link: "/md/运维/Docker容器/101.Docker-可视化Portainer.md" },
-            { text: "102.Docker-ChatGPT", link: "/md/运维/Docker容器/102.Docker-ChatGPT.md" },
             { text: "103.Docker-IDEA", link: "/md/运维/Docker容器/103.Docker-IDEA.md" },
             { text: "104.Docker-VScode", link: "/md/运维/Docker容器/104.Docker-VScode.md" },
             { text: "105.Docker-NginxProxyManager", link: "/md/运维/Docker容器/105.Docker-NginxProxyManager.md" },

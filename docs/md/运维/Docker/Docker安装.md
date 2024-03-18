@@ -129,17 +129,7 @@ docker-compose -v
 - 如果之前安装过旧版本的Docker，可以使用下面命令卸载：
 
 ```
-yum remove docker \
-docker-client \
-docker-client-latest \
-docker-common \
-docker-latest \
-docker-latest-logrotate \
-docker-logrotate \
-docker-selinux \
-docker-engine-selinux \
-docker-engine \
-docker-ce
+sudo yum remove docker*
 ```
 
 ## 安装 Docker
