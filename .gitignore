@@ -3,5 +3,6 @@ dist
 .idea
 .fastRequest
 cache
+docs/.vitepress/dist
 .temp
 .DS_Store

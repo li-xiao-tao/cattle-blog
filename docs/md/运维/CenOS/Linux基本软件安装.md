@@ -1,5 +1,5 @@
 ---
-title: CenOS基本软件安装
+title: 基本软件安装
 # 取二三级标题生成目录
 outline: [1,2]
 ---
@@ -360,3 +360,19 @@ nvm -v
   ```
 
   
+```shell
+export PATH=$PATH:/home/docker/docker-compose
+
+export JAVA_HOME=/home/soft/java
+export JRE_HOME=/home/soft/java/jre
+export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+
+
+export MAVEN_HOME=/home/soft/maven
+export PATH=${PATH}:${MAVEN_HOME}/bin
+
+export NODE_HOME=/home/soft/node
+export PATH=$PATH:${NODE_HOME}/bin
+
+```

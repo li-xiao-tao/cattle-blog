@@ -13,12 +13,12 @@ const blogTheme = getThemeConfig({
   tabs: true,
   // 友链
   friend: [
-    {
-      nickname: '开源作者',
-      des: '',
-      avatar:'https://avatars.githubusercontent.com/u/49076004?v=4',
-      url: 'https://linweiyuan.github.io/'
-    }
+    // {
+    //   nickname: '开源作者',
+    //   des: '',
+    //   avatar:'https://avatars.githubusercontent.com/u/49076004?v=4',
+    //   url: 'https://linweiyuan.github.io/'
+    // }
   ],
   // 推荐文章
   recommend: {

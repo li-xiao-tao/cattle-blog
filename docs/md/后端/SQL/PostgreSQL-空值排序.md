@@ -16,7 +16,7 @@ order by age desc nulls last
 
 - 在文件中搜索 `default_sorting` 参数。如果找不到该参数，可以在文件末尾添加以下内容：
 
-```conf
+```txt
 default_sorting = 'mixed-asc-nulls-last'
 ```
 

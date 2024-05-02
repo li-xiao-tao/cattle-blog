@@ -84,18 +84,6 @@ export const navMenus: NavMenu[] = [
     ]
   },
   {
-    text: "自建容器站点",
-    // 是否可折叠
-    collapsible: true,
-    // 默认是否折叠
-    collapsed: true,
-    items: [
-      { text: "VSCode", link: "https://vscode.174907.xyz/" },
-      { text: "docker可视化", link: "https://docker.174907.xyz/" },
-      { text: "博客", link: "https://www.174907.xyz/" },
-    ]
-  },
-  {
     text: "算法",
     // 是否可折叠
     collapsible: true,
