@@ -86,8 +86,8 @@ export default defineConfig({
     // },
   },
   // github page base: '/项目名/'
-  base: '/cattle-blog/',
+  base: '/',
   head:[
-    ['link', { rel: 'icon', href: '/cattle-blog/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ]
 })
