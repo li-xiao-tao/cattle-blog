@@ -101,8 +101,7 @@ export const navMenus: NavMenu[] = [
     collapsed: true,
     items: [
       { text: "Json工具箱", link: "/components-md/JsonFormatter.md" },
-      { text: "UUID", link: "/components-md/UUID.md" },
-      { text: "icon", link: "https://www.gaituya.com/icon/" },
+      { text: "UUID", link: "/components-md/UUID.md" }
     ]
   }
 ]

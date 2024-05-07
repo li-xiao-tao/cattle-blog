@@ -80,16 +80,11 @@ export default defineConfig({
     outline: [0,2],
     // 此功能虽是默认提供，也可以通过配置来定制默认的文字。
     docFooter: { prev: '上一篇', next: '下一篇' },
-    // 在 Github 编辑此页 可以通过 editLink 来进行配置
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
-    //   text: '去 GitHub 上编辑内容'
-    // },
-    // 页脚备案信息
     footer: {
       copyright:
           "Copyright © 2022 Cattle-Doc 笔记 <a target='_blank' href='https://beian.miit.gov.cn'>皖ICP备2022011262号-1</a>"
     },
-  }
+  },
+  // github page
+  base: '/bar/'
 })
