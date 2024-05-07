@@ -85,6 +85,6 @@ export default defineConfig({
           "Copyright © 2022 Cattle-Doc 笔记 <a target='_blank' href='https://beian.miit.gov.cn'>皖ICP备2022011262号-1</a>"
     },
   },
-  // github page
-  base: '/bar/'
+  // github page base: '/项目名/'
+  base: '/cattle-blog/'
 })
