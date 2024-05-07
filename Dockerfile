@@ -8,8 +8,8 @@ RUN yarn install --registry https://registry.npmmirror.com/ && yarn run build
 
 FROM nginx:alpine
 
-COPY /nginx/nginx.conf /etc/nginx/conf.d/cattle-blog.conf
+COPY /app/nginx/nginx.conf /etc/nginx/conf.d/cattle-blog.conf
 
-COPY ./docs/.vitepress/dist/ /usr/share/nginx/html/
+COPY /app/docs/.vitepress/dist/ /usr/share/nginx/html/
 
 EXPOSE 80
