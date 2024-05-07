@@ -70,7 +70,7 @@ export default defineConfig({
   },
   lastUpdated: true,
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/favicon.ico',
     // 导航栏
     nav: navMenus,
     // 侧边栏
