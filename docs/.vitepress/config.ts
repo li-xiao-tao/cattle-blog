@@ -54,7 +54,7 @@ const blogTheme = getThemeConfig({
   }
 })
 
-export default defineConfig({
+export default {
   // 忽略死链接
   ignoreDeadLinks: true,
   extends: blogTheme,
@@ -90,4 +90,4 @@ export default defineConfig({
   head:[
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ]
-})
+}
