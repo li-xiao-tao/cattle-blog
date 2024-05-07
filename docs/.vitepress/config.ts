@@ -54,7 +54,7 @@ const blogTheme = getThemeConfig({
   }
 })
 
-export default {
+export default defineConfig({
   // 忽略死链接
   ignoreDeadLinks: true,
   extends: blogTheme,
@@ -80,14 +80,14 @@ export default {
     outline: [0,2],
     // 此功能虽是默认提供，也可以通过配置来定制默认的文字。
     docFooter: { prev: '上一篇', next: '下一篇' },
-    footer: {
-      copyright:
-          "Copyright © 2022 Cattle-Doc 笔记 <a target='_blank' href='https://beian.miit.gov.cn'>皖ICP备2022011262号-1</a>"
-    },
+    // footer: {
+    //   copyright:
+    //       "Copyright © 2022 Cattle-Doc 笔记 <a target='_blank' href='https://beian.miit.gov.cn'>皖ICP备2022011262号-1</a>"
+    // },
   },
   // github page base: '/项目名/'
   base: '/cattle-blog/',
   head:[
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ]
-}
+})
