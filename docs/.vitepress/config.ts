@@ -51,7 +51,26 @@ const blogTheme = getThemeConfig({
      * 是否隐藏文章页的封面展示
      */
     hiddenCover: false
-  }
+  },
+  oml2d: {
+    mobileDisplay: true,
+    models: [
+      {
+        path: 'https://model.oml2d.com/HK416-1-normal/model.json',
+        position: [0, 60],
+        scale: 0.08,
+        stageStyle: {
+          height: 450
+        }
+      },
+      {
+        path: "https://model.oml2d.com/cat-black/model.json"
+      },
+      {
+        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json'
+      },
+    ]
+  },
 })
 
 export default defineConfig({
@@ -86,8 +105,8 @@ export default defineConfig({
     // },
   },
   // github page base: '/项目名/'
-  base: '/cattle-blog/',
+  base: '/blog/',
   head:[
-    ['link', { rel: 'icon', href: '/cattle-blog/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/blog/favicon.ico' }]
   ]
 })
