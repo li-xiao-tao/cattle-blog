@@ -49,10 +49,10 @@ jobs:
           fetch-depth: 0
 
       # 设置使用 Node.js 版本
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
 
       # 使用 npm 替换为 pnpm
       - name: Install dependencies
