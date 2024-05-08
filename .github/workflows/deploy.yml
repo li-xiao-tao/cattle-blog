@@ -54,22 +54,22 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # 使用 npm V8
-      - uses: npm/action-setup@v2
-        name: Install npm
+      # 使用 PNPM V8
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
         with:
           version: 8
           run_install: false
 
         # 安装依赖
       - name: Install dependencies
-        run: npm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
         # 构建项目
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
-          npm build
+          pnpm build
 
         # 资源拷贝
       - name: Build with Jekyll
