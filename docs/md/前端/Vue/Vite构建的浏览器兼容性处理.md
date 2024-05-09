@@ -30,7 +30,7 @@
 - 在vite.config.js中配置
 
 ```js
-// vite.config.ts
+// vite.config.mts
 import legacy from '@vitejs/plugin-legacy'
 
 export default {

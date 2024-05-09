@@ -65,10 +65,10 @@ npm init vue@latest
 ├── README.md // 应用程序的说明文档
 ├── tsconfig.json // TypeScript编译器的配置文件
 ├── tsconfig.node.json // Node.js环境的TypeScript编译器的配置文件
-└── vite.config.ts // Vite构建工具的配置文件
+└── vite.config.mts // Vite构建工具的配置文件
 ```
 
-## 4.配置`vite.config.ts`
+## 4.配置`vite.config.mts`
 
 - 实现修改端口
 

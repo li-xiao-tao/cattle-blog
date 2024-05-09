@@ -115,7 +115,7 @@ nvm install stable
 
 ### 修改 Vite 配置文件
 
-Vite 配置文件 `vite.config.ts` 位于根目录下，项目启动时会自动读取。
+Vite 配置文件 `vite.config.mts` 位于根目录下，项目启动时会自动读取。
 
 本项目先做一些简单配置，例如：设置 `@` 指向 `src` 目录、 服务启动端口、打包路径、代理等。
 
@@ -174,7 +174,7 @@ export default defineConfig({
 ├── tests/                         // 单元测试目录
 ├── index.html
 ├── tsconfig.json                  // TypeScript 配置文件
-├── vite.config.ts                 // Vite 配置文件
+├── vite.config.mts                 // Vite 配置文件
 └── package.json
 
 ```
@@ -1117,7 +1117,7 @@ npx commitizen init cz-customizable --save-dev --save-exact --force
 
 ##### 使用 cz-customizable
 
-在项目根目录下创建 `.cz-config.ts` 文件，然后按照官方提供的[示例](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fleoforfree%2Fcz-customizable%2Fblob%2Fmaster%2Fcz-config-EXAMPLE.js "https://github.com/leoforfree/cz-customizable/blob/master/cz-config-EXAMPLE.js")来配置。
+在项目根目录下创建 `.cz-config.mts` 文件，然后按照官方提供的[示例](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fleoforfree%2Fcz-customizable%2Fblob%2Fmaster%2Fcz-config-EXAMPLE.js "https://github.com/leoforfree/cz-customizable/blob/master/cz-config-EXAMPLE.js")来配置。
 
 在本项目中我们修改成中文：
 
@@ -1206,7 +1206,7 @@ module.exports = {
 
 ```
 
-建议大家结合项目实际情况来自定义配置提交规则，例如很多时候我们不需要写长描述，公司内部的代码仓库也不需要管理 issue，那么可以把询问 body 和 footer 的步骤跳过（在 `.cz-config.ts` 中修改成 `skipQuestions: ['body', 'footer']`）。
+建议大家结合项目实际情况来自定义配置提交规则，例如很多时候我们不需要写长描述，公司内部的代码仓库也不需要管理 issue，那么可以把询问 body 和 footer 的步骤跳过（在 `.cz-config.mts` 中修改成 `skipQuestions: ['body', 'footer']`）。
 
 ![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c52e04ef0cda442fbd6c5c58691f8751~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
 
@@ -1225,7 +1225,7 @@ npm i @commitlint/config-conventional @commitlint/cli -D
 
 #### 配置 commitlint
 
-*   创建 commitlint.config.ts 文件 在项目根目录下创建 `commitlint.config.ts` 文件，并填入以下内容：
+*   创建 commitlint.config.mts 文件 在项目根目录下创建 `commitlint.config.mts` 文件，并填入以下内容：
     
     ```
     module.exports = { extends: ['@commitlint/config-conventional'] }
@@ -1235,7 +1235,7 @@ npm i @commitlint/config-conventional @commitlint/cli -D
     或直接使用快捷命令：
     
     ```
-    echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.ts
+    echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.mts
     
     ```
     
@@ -1289,7 +1289,7 @@ npm i @vue/test-utils@next jest vue-jest@next ts-jest -D
 
 ### 创建 jest 配置文件
 
-在项目根目录下新建 `jest.config.ts` 文件：
+在项目根目录下新建 `jest.config.mts` 文件：
 
 ```
 module.exports = {
@@ -1308,7 +1308,7 @@ module.exports = {
 
 ### 创建单元测试文件
 
-在上面的 `jest.config.ts` 文件中，我们配置只匹配 `__tests__` 目录下的任意 `.ts` 文件或其他目录下的 `xx.test.ts`/`xx.spec.ts` 文件进行单元测试。
+在上面的 `jest.config.mts` 文件中，我们配置只匹配 `__tests__` 目录下的任意 `.ts` 文件或其他目录下的 `xx.test.ts`/`xx.spec.ts` 文件进行单元测试。
 
 这里，我们在项目根目录下创建 `tests` 目录来存储单元测试文件
 
@@ -1425,9 +1425,9 @@ TypeScript 的编译器也会提示 jest 的方法和类型找不到，我们还
 
 ![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66354199386b431088db0593f34b88e6~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
 
-执行命令 `npm run test` 即可进行单元测试，jest 会根据 `jest.config.ts` 配置文件去查找 `__tests__` 目录下的 `.ts` 文件或其他任意目录下的 `.spec.ts` 和 `.test.ts` 文件，然后执行单元测试方法。
+执行命令 `npm run test` 即可进行单元测试，jest 会根据 `jest.config.mts` 配置文件去查找 `__tests__` 目录下的 `.ts` 文件或其他任意目录下的 `.spec.ts` 和 `.test.ts` 文件，然后执行单元测试方法。
 
-> 你可以在 `jest.config.ts` 配置文件中，自由配置单元测试文件的目录。
+> 你可以在 `jest.config.mts` 配置文件中，自由配置单元测试文件的目录。
 
 *   单元测试全部通过时的终端显示信息 ![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/183f9884427848ab80a14591dfb932c7~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
     

@@ -208,7 +208,7 @@ export default {
 
 ## 6.端口设置
 
-- 修改根目录`vue.config.ts`
+- 修改根目录`vue.config.mts`
 
 ```vue
 const { defineConfig } = require('@vue/cli-service')
@@ -228,7 +228,7 @@ module.exports = defineConfig({
 
 ## 7.跨域解决
 
-- 修改`vue.config.ts`，添加代理
+- 修改`vue.config.mts`，添加代理
 
 ```js
 const {defineConfig} = require('@vue/cli-service')

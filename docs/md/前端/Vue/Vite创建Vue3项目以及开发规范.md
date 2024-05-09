@@ -151,7 +151,7 @@ module.exports = defineConfig({
 
 
 ```js
-// prettier.config.ts
+// prettier.config.mts
 module.exports = {
 	// 一行最多多少个字符
 	printWidth: 120,

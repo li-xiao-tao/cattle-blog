@@ -1,9 +1,21 @@
-import { getThemeConfig, defineConfig } from '@sugarat/theme/node'
-// 导航栏
-import { navMenus } from "./perimeter/nav"
-import { sidebarMenus } from "./perimeter/sidebar";
+// 主题独有配置
+import { getThemeConfig } from '@sugarat/theme/node'
 
+// 开启RSS支持（RSS配置）
+// import type { Theme } from '@sugarat/theme'
 
+// const baseUrl = 'https://sugarat.top'
+// const RSS: Theme.RSSOptions = {
+//   title: '粥里有勺糖',
+//   baseUrl,
+//   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
+//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
+//   language: 'zh-cn',
+//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
+//   favicon: 'https://sugarat.top/favicon.ico',
+// }
+
+// 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
   // 切换原生和blog模式
   //blog: false,
@@ -73,40 +85,4 @@ const blogTheme = getThemeConfig({
   },
 })
 
-export default defineConfig({
-  // 忽略死链接
-  ignoreDeadLinks: true,
-  extends: blogTheme,
-  lang: 'zh-cn',
-  title: '技术笔记',
-  description: '豆腐脑吃甜的',
-  vite: {
-    optimizeDeps: {
-      include: ['element-plus'],
-      // 预构建排除依赖
-      exclude: ['@sugarat/theme','vitepress-plugin-tabs']
-    }
-  },
-  lastUpdated: true,
-  themeConfig: {
-    logo: '/favicon.ico',
-    // 导航栏
-    nav: navMenus,
-    // 侧边栏
-    sidebar: sidebarMenus,
-    lastUpdatedText: '上次更新于',
-    /*右侧大概配置 展示h1-h6*/
-    outline: [0,2],
-    // 此功能虽是默认提供，也可以通过配置来定制默认的文字。
-    docFooter: { prev: '上一篇', next: '下一篇' },
-    // footer: {
-    //   copyright:
-    //       "Copyright © 2022 Cattle-Doc 笔记 <a target='_blank' href='https://beian.miit.gov.cn'>皖ICP备2022011262号-1</a>"
-    // },
-  },
-  // github page base: '/项目名/'
-  base: '/cattle-blog/',
-  head:[
-    ['link', { rel: 'icon', href: '/cattle-blog/favicon.ico' }]
-  ]
-})
+export { blogTheme }

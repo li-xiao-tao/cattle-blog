@@ -92,16 +92,5 @@ export const navMenus: NavMenu[] = [
     items: [
       { text: "无向图", link: "/md/算法/无向图.md" }
     ]
-  },
-  {
-    text: "工具箱",
-    // 是否可折叠
-    collapsible: true,
-    // 默认是否折叠
-    collapsed: true,
-    items: [
-      { text: "Json工具箱", link: "/components-md/JsonFormatter.md" },
-      { text: "UUID", link: "/components-md/UUID.md" }
-    ]
   }
 ]
