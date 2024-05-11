@@ -122,12 +122,12 @@ export const sidebarMenus: SidebarMenu[] = [
         // 默认是否折叠
         collapsed: true,
         items: [
-            { text: "安装NVM-VUE", link: "/md/前端/Vue/安装NVM-VUE.md" },
-            { text: "创建Vue项目-ElementUI-axios", link: "/md/前端/Vue/创建Vue项目-ElementUI-axios.md" },
-            { text: "Vue基础", link: "/md/前端/Vue/Vue基础.md" },
             { text: "Vue-router模块拆分", link: "/md/前端/Vue/Vue-router模块拆分.md" },
+            { text: "Vue基础", link: "/md/前端/Vue/Vue基础.md" },
             { text: "Vue登录Demo", link: "/md/前端/Vue/Vue登录Demo.md" },
             { text: "Vue适配移动端", link: "/md/前端/Vue/Vue适配移动端.md" },
+            { text: "创建Vue项目-ElementUI-axios", link: "/md/前端/Vue/创建Vue项目-ElementUI-axios.md" },
+            { text: "安装NVM-VUE", link: "/md/前端/Vue/安装NVM-VUE.md" },
             { text: "样式学习", link: "/md/前端/Vue/样式学习.md" },
             { text: "组件-代码提示", link: "/md/前端/VUE组件/代码提示.md" },
             { text: "组件-WangEditor富文本", link: "/md/前端/VUE组件/WangEditor富文本.md" },
@@ -140,8 +140,8 @@ export const sidebarMenus: SidebarMenu[] = [
         // 默认是否折叠
         collapsed: true,
         items: [
-            { text: "Day01Html", link: "/md/前端/Html/Day01-html.md" },
-            { text: "Day02CSS", link: "/md/前端/Html/Day02-css.md" },
+            { text: "Day01Html", link: "/md/前端/学习/1-Html/Day01-html.md" },
+            { text: "Day02CSS", link: "/md/前端/学习/2-CSS/Day02-css.md" },
         ]
     },
     {
@@ -176,7 +176,7 @@ export const sidebarMenus: SidebarMenu[] = [
             { text: "5.Docker-dragonfly垂直redis", link: "/md/运维/Docker容器/5.Docker-dragonfly垂直redis.md" },
             { text: "6.Docker-kibana", link: "/md/运维/Docker容器/6.Docker-kibana.md" },
             { text: "6.Docker-Elasticsearch", link: "/md/运维/Docker容器/6.Docker-Elasticsearch.md" },
-            { text: "6.Docker-Elasticsearch可视化", link: "/md/运维/Docker容器/6.Docker-Elasticsearch可视化elastic_view.md" },
+            { text: "6.Docker-Elasticsearch可视化", link: "/md/运维/Docker容器/6.Docker-Elasticsearch可视化elasticvue.md" },
             { text: "7.Docker-GitLab", link: "/md/运维/Docker容器/7.Docker-GitLab.md" },
             { text: "7.Docker-onedev轻量级GitLab", link: "/md/运维/Docker容器/7.Docker-onedev轻量级GitLab.md" },
             { text: "8.Docker-Jenkins", link: "/md/运维/Docker容器/8.Docker-Jenkins.md" },
@@ -211,7 +211,17 @@ export const sidebarMenus: SidebarMenu[] = [
         collapsed: true,
         items: [
             {text: "List校验", link: "/md/后端/utils/List校验.md"},
-            {text: "BigDecimal详解", link: "/md/后端/Java/接口详情AOP.md"},
+            {text: "Redisson分布式锁", link: "/md/后端/utils/Redisson分布式锁.md"},
+            {text: "Redisson分布式锁切面方法", link: "/md/后端/utils/Redisson分布式锁切面方法.md"},
+            {text: "图片处理", link: "/md/后端/utils/图片处理.md"},
+            {text: "对象比较", link: "/md/后端/utils/对象比较.md"},
+            {text: "对象转换", link: "/md/后端/utils/对象转换.md"},
+            {text: "接口详情AOP", link: "/md/后端/utils/接口详情AOP.md"},
+            {text: "文件下载", link: "/md/后端/utils/文件下载.md"},
+            {text: "本地网络图片BASE互转", link: "/md/后端/utils/本地网络图片BASE互转.md"},
+            {text: "正则", link: "/md/后端/utils/正则.md"},
+            {text: "递归", link: "/md/后端/utils/递归.md"},
+            {text: "预重复请求切面方法", link: "/md/后端/utils/预重复请求切面方法.md"},
         ]
     },
 ]
